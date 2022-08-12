@@ -9,6 +9,11 @@ public class Inicio {
 		atracao.setNome("Tour no RJ");
 		atracao.setDescricao("Uma volta pelos principais pontos turísticos do Rio de Janeiro");
 		System.out.println(atracao.getNome() + "\n" + atracao.getDescricao());
+	
+	Restaurante restaurante = new Restaurante()
+			
+	
+	
 	}
 
 }
