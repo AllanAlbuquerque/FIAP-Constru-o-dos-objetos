@@ -32,11 +32,19 @@ public class Avaliacao {
 		this.nota = nota;
 	}
 	
-	public Mensagem getMensagem() {
+	public Mensagem[] getMensagem() {
 		return mensagem;
 	}
 	
-	public void setMensagem(Mensagem mensagem) {
+	public void setMensagem(Mensagem[] mensagem) {
 		this.mensagem = mensagem;
-	}		
+	}
+	
+	public void comentar(String comentario) {
+		Mensagem novaMensagem = new Mensagem();
+		novaMensagem.setMensagem(comentario);
+		
+		/* Inserir no banco nova mensagem para esta avaliação*/
+		
+	}
 }

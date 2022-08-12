@@ -90,4 +90,12 @@ public class Endereco {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
+	
+	public void cadastrarEndereco() {
+		/* Inserir no banco este endereco */
+	}
+	
+	public void alterarEndereco() {
+		/* Atualizar no banco este endereco */
+	}
 }
