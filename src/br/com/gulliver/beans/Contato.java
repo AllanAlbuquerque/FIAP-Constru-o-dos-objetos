@@ -23,31 +23,48 @@ public class Contato {
 	public int getId() {
 		return id;
 	}
+	
 	public void setId(int id) {
 		this.id = id;
 	}
+	
 	public int getTelefone() {
 		return telefone;
 	}
+	
 	public void setTelefone(int telefone) {
 		this.telefone = telefone;
 	}
+	
 	public String getTwitter() {
 		return twitter;
 	}
+	
 	public void setTwitter(String twitter) {
 		this.twitter = twitter;
 	}
+	
 	public String getFacebook() {
 		return facebook;
 	}
+	
 	public void setFacebook(String facebook) {
 		this.facebook = facebook;
 	}
+	
 	public String getInstagram() {
 		return instagram;
 	}
+	
 	public void setInstagram(String instagram) {
 		this.instagram = instagram;
+	}
+	
+	public void cadastrarContato() {
+		/* Inserir no banco este contato */
+	}
+	
+	public void alterarContato() {
+		/* Atualizar no banco este contato */
 	}
 }

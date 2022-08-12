@@ -59,35 +59,75 @@ public class Atividade {
 		this.endereco = endereco;
 	}
 	
-	public Restaurante getRestaurante() {
+	public Restaurante[] getRestaurante() {
 		return restaurante;
 	}
 	
-	public void setRestaurante(Restaurante restaurante) {
+	public void setRestaurante(Restaurante[] restaurante) {
 		this.restaurante = restaurante;
 	}
 	
-	public Hospedagem getHospedagem() {
+	public Hospedagem[] getHospedagem() {
 		return hospedagem;
 	}
 	
-	public void setHospedagem(Hospedagem hospedagem) {
+	public void setHospedagem(Hospedagem[] hospedagem) {
 		this.hospedagem = hospedagem;
 	}
 	
-	public Imagem getImagem() {
+	public Imagem[] getImagem() {
 		return imagem;
 	}
 	
-	public void setImagem(Imagem imagem) {
+	public void setImagem(Imagem[] imagem) {
 		this.imagem = imagem;
 	}
 	
-	public Avaliacao getAvaliacao() {
+	public Avaliacao[] getAvaliacao() {
 		return avaliacao;
 	}
 	
-	public void setAvaliacao(Avaliacao avaliacao) {
+	public void setAvaliacao(Avaliacao[] avaliacao) {
 		this.avaliacao = avaliacao;
-	}	
+	}
+	
+	public void avaliar(int nota, String comentario) {
+		Mensagem novaMensagem[] = new Mensagem[0];
+		novaMensagem[0].setMensagem(comentario);
+				
+		/* Inserir no banco a nova mensagem */
+		int idMensagem = 1; //ID criado pelo banco
+		
+		Avaliacao novaAvaliacao = new Avaliacao(idMensagem, nota, novaMensagem);
+		/* Inserir no banco a nova avaliacao */
+		
+	}
+	
+	public void cadastrarAtividade() {
+		/* Inserir no banco esta atividade */
+	}
+	
+	public void alterarAtividade() {
+		/* Atualizar no banco esta atividade */
+	}
+	
+	public void deletearAtividade() {
+		/* Deletar no banco esta atividade */
+	}
+	
+	public double buscarMediaDasAvaliacoes() {
+		/* Buscar as media de avaliacoes dessa atividade */
+		return 4.5;
+	}
+	
+	public int buscarQntHospedagens() {
+		/* Buscar a quantidade de hospedagens disponíveis pra essa atividade */
+		return 4;
+	}
+	
+	public int buscarQntRestaurantes() {
+		/* Buscar a quantidade de restaurantes disponíveis pra essa atividade */
+		return 8;
+	}
+	
 }

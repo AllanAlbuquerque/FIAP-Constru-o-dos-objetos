@@ -39,4 +39,12 @@ public class Imagem {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	
+	public void cadastrarImagem() {
+		/* Inserir no banco esta imagem */
+	}
+	
+	public void deletarImagem() {
+		/* Deletar no banco esta imagem */
+	}
 }
