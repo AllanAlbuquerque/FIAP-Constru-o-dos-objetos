@@ -1,7 +1,7 @@
 package br.com.gulliver.beans;
 
 public class Imagem {
-	private String id;
+	private int id;
 	private String url;
 	private String descricao;
 	
@@ -9,18 +9,18 @@ public class Imagem {
 		super();
 	}
 	
-	public Imagem(String id, String url, String descricao) {
+	public Imagem(int id, String url, String descricao) {
 		super();
 		this.id = id;
 		this.url = url;
 		this.descricao = descricao;
 	}
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 	
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	

@@ -95,10 +95,8 @@ public class Atividade {
 		Mensagem novaMensagem[] = new Mensagem[0];
 		novaMensagem[0].setMensagem(comentario);
 				
-		/* Inserir no banco a nova mensagem */
-		int idMensagem = 1; //ID criado pelo banco
-		
-		Avaliacao novaAvaliacao = new Avaliacao(idMensagem, nota, novaMensagem);
+		/* Inserir no banco a nova mensagem */		
+		Avaliacao novaAvaliacao = new Avaliacao(1, nota, novaMensagem);
 		/* Inserir no banco a nova avaliacao */
 		
 	}
