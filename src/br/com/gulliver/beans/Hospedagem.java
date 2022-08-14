@@ -2,16 +2,16 @@ package br.com.gulliver.beans;
 
 public class Hospedagem {
 	private int id;
-	private int titulo;
-	private int descricao;
-	private Endereco[] endereco;
+	private String titulo;
+	private String descricao;
+	private Endereco endereco;
 	private Imagem[] imagem;
 	
 	public Hospedagem() {
 		super();
 	}
 	
-	public Hospedagem(int id, int titulo, int descricao, Endereco[] endereco, Imagem[] imagem) {
+	public Hospedagem(int id, String titulo, String descricao, Endereco endereco, Imagem[] imagem) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
@@ -19,7 +19,7 @@ public class Hospedagem {
 		this.endereco = endereco;
 		this.imagem = imagem;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -28,35 +28,48 @@ public class Hospedagem {
 		this.id = id;
 	}
 
-	public int getTitulo() {
+	public String getTitulo() {
 		return titulo;
 	}
 
-	public void setTitulo(int titulo) {
+	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
-	public Endereco[] getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(Endereco[] endereco) {
-		this.endereco = endereco;
-	}
-
-	public int getDecricao() {
+	public String getDescricao() {
 		return descricao;
 	}
 
-	public void setDescricao(int descricao) {
+	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 	public Imagem[] getImagem() {
 		return imagem;
 	}
 
-	public void setImagens(Imagem[] imagem) {
+	public void setImagem(Imagem[] imagem) {
 		this.imagem = imagem;
 	}
+	
+	public void cadastrarHospedagem() {
+		/* Inserir no banco esta Hospedagem */
+	}
+	
+	public void alterarHospedagem() {
+		/* Atualizar no banco esta Hospedagem */
+	}
+	
+	public void deletearHospedagem() {
+		/* Deletar no banco esta Hospedagem */
+	}
+	
 }
