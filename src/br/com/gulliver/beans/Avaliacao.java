@@ -1,19 +1,21 @@
 package br.com.gulliver.beans;
 
+import java.util.ArrayList;
+
 public class Avaliacao {
 	private int id;
 	private int nota;
-	private Mensagem[] mensagem;
+	private ArrayList<Mensagem> mensagens;
 	
 	public Avaliacao() {
 		super();
 	}
 	
-	public Avaliacao(int id, int nota, Mensagem[] mensagem) {
+	public Avaliacao(int id, int nota, ArrayList<Mensagem> mensagens) {
 		super();
 		this.id = id;
 		this.nota = nota;
-		this.mensagem = mensagem;
+		this.mensagens = mensagens;
 	}
 
 	public int getId() {
@@ -32,12 +34,12 @@ public class Avaliacao {
 		this.nota = nota;
 	}
 	
-	public Mensagem[] getMensagem() {
-		return mensagem;
+	public Mensagem getMensagem(int id) {
+		return this.mensagens.get(id);
 	}
 	
-	public void setMensagem(Mensagem[] mensagem) {
-		this.mensagem = mensagem;
+	public void setMensagem(Mensagem mensagem) {
+		this.mensagens.set(mensagens.size(), mensagem);
 	}
 	
 	public void comentar(String comentario) {
