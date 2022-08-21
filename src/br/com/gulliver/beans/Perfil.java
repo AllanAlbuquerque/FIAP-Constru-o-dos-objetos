@@ -1,25 +1,27 @@
 package br.com.gulliver.beans;
 
+import java.util.ArrayList;
+
 public class Perfil {
 	private int id;
 	private String nome;
 	private String bios;
 	private String email;
 	private Contato contato;
-	private Atividade[] atividade;
+	private ArrayList<Atividade> atividades;
 	
 	public Perfil() {
 		super();
 	}
 	
-	public Perfil(int id, String nome, String bios, String email, Contato contato, Atividade[] atividade) {
+	public Perfil(int id, String nome, String bios, String email, Contato contato, ArrayList<Atividade> atividades) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.bios = bios;
 		this.email = email;
 		this.contato = contato;
-		this.atividade = atividade;
+		this.atividades = atividades;
 	}
 	
 	public int getId() {
@@ -62,12 +64,12 @@ public class Perfil {
 		this.contato = contato;
 	}
 	
-	public Atividade[] getAtividade() {
-		return atividade;
+	public Atividade getAtividade(int id) {
+		return this.atividades.get(id);
 	}
 	
-	public void setAtividade(Atividade[] atividade) {
-		this.atividade = atividade;
+	public void setAtividade(Atividade atividade) {
+		this.atividades.set(atividades.size(), atividade);
 	}
 	
 	public void cadastrarPerfil() {

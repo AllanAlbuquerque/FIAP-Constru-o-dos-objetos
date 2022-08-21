@@ -1,23 +1,25 @@
 package br.com.gulliver.beans;
 
+import java.util.ArrayList;
+
 public class Restaurante {
 	private int id;
 	private String nome;
 	private String descricao;
 	private Endereco endereco;
-	private Imagem[] imagem;
+	private ArrayList<Imagem> imagens;
 	
 	public Restaurante()  {
 		super();
 	}
 
-	public Restaurante(int id, String nome, String descricao, Endereco endereco, Imagem[] imagem) {
+	public Restaurante(int id, String nome, String descricao, Endereco endereco, ArrayList<Imagem> imagens) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.endereco = endereco;
-		this.imagem = imagem;
+		this.imagens = imagens;
 	}
 
 	public int getId() {
@@ -52,12 +54,12 @@ public class Restaurante {
 		this.endereco = endereco;
 	}
 
-	public Imagem[] getImagem() {
-		return imagem;
+	public Imagem getImagem(int id) {
+		return this.imagens.get(id);
 	}
 
-	public void setImagem(Imagem[] imagem) {
-		this.imagem = imagem;
+	public void setImagem(Imagem imagem) {
+		this.imagens.set(imagens.size(), imagem);
 	}
 
 	public void cadastrarRestaurante() {
