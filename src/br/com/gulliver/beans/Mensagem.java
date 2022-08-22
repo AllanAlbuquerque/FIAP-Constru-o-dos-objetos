@@ -29,4 +29,8 @@ public class Mensagem {
 	public void setMensagem(String mensagem) {
 		this.mensagem = mensagem;
 	}	
+	
+	public String toString() {
+		return "Mensagem[id="+ this.getId() +", mensagem="+ this.getMensagem() +"]";
+	}
 }

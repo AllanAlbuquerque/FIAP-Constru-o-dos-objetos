@@ -57,6 +57,10 @@ public class Restaurante {
 	public Imagem getImagem(int id) {
 		return this.imagens.get(id);
 	}
+	
+	public ArrayList<Imagem> getImagens() {
+		return this.imagens;
+	}
 
 	public void setImagem(Imagem imagem) {
 		this.imagens.set(imagens.size(), imagem);
@@ -72,6 +76,10 @@ public class Restaurante {
 	
 	public void deletearRestaurante() {
 		/* Deletar no banco esta Restaurante */
+	}
+	
+	public String toString() {
+		return "Restaurante[id="+ this.getId() +", nome="+ this.getNome() + ", descricao="+this.getDescricao() +", endereco="+ this.getEndereco()+", imagens="+ this.getImagens() +"]";
 	}
 
 }

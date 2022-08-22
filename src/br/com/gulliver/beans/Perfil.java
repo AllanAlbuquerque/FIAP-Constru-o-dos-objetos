@@ -68,6 +68,10 @@ public class Perfil {
 		return this.atividades.get(id);
 	}
 	
+	public ArrayList<Atividade> getAtividades() {
+		return this.atividades;
+	}
+	
 	public void setAtividade(Atividade atividade) {
 		this.atividades.set(atividades.size(), atividade);
 	}
@@ -78,6 +82,11 @@ public class Perfil {
 	
 	public void alterarPerfil() {
 		/* Atualizar no banco este Perfil */
+	}
+	
+	public String toString() {
+		return "Perfil[ id="+ this.getId()+", nome="+ this.getNome()+", email="+ this.getEmail()
+		+", bios="+ this.getBios()+ ", contato= "+ this.getContato() +", atividades="+ this.getAtividades() +"]";
 	}
 	
 }

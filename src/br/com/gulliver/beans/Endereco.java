@@ -98,4 +98,9 @@ public class Endereco {
 	public void alterarEndereco() {
 		/* Atualizar no banco este endereco */
 	}
+	
+	public String toString() {
+		return "Endereco[id="+ this.getId() +", logradouro="+ this.getLogradouro() + ", numero="+this.getNumero() +", bairro="+ this.getBairro()+", cep="+ this.getCep() +", uf="+ this.getUf() +", pais="+ this.getPais() +", cidade="+ this.getCidade() +"]";
+	}
+
 }

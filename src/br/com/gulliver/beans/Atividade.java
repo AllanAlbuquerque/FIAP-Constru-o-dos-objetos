@@ -66,32 +66,75 @@ public class Atividade {
 		return this.restaurantes.get(id);
 	}
 	
+	public ArrayList<Restaurante> getRestaurantes() {
+		return this.restaurantes;
+	}
+	
+	
+	
 	public void setRestaurante(Restaurante restaurante) {
-		this.restaurantes.set(this.restaurantes.size(), restaurante);
+		if(restaurantes == null) {
+			this.restaurantes = new ArrayList<Restaurante>();
+			this.restaurantes.add(restaurante);
+		}
+		else {
+			this.restaurantes.set(this.restaurantes.size(), restaurante);
+		}
 	}
 	
 	public Hospedagem getHospedagem(int id) {
 		return this.hospedagens.get(id);
 	}
 	
+	public ArrayList<Hospedagem> getHospedagens() {
+		return this.hospedagens;
+	}
+	
 	public void setHospedagem(Hospedagem hospedagem) {
-		this.hospedagens.set(this.hospedagens.size(), hospedagem);
+		if(hospedagens == null) {
+			this.hospedagens = new ArrayList<Hospedagem>();
+			this.hospedagens.add( hospedagem);
+		}
+		else {
+			this.hospedagens.set(this.hospedagens.size(), hospedagem);
+		}
 	}
 	
 	public Imagem getImagem(int id) {
 		return this.imagens.get(id);
 	}
 	
+	public  ArrayList<Imagem> getImagens() {
+		return this.imagens;
+	}
+	
 	public void setImagem(Imagem imagem) {
-		this.imagens.set(imagens.size(), imagem);
+		if(imagens == null) {
+			this.imagens = new ArrayList<Imagem>();
+			this.imagens.add(imagem);
+		}
+		else {
+			this.imagens.add(imagem);
+		}
 	}
 	
 	public Avaliacao getAvaliacao(int id) {
 		return this.avaliacoes.get(id);
 	}
 	
+	public ArrayList<Avaliacao> getAvaliacaos() {
+		return this.avaliacoes;
+	}
+	
 	public void setAvaliacao(Avaliacao avaliacao) {
-		this.avaliacoes.set(avaliacoes.size(), avaliacao);
+		
+		if(avaliacoes == null) {
+			this.avaliacoes = new ArrayList<Avaliacao>();
+			this.avaliacoes.add( avaliacao);
+		}
+		else {
+			this.avaliacoes.set(this.avaliacoes.size(), avaliacao);
+		}
 	}
 	
 	public void avaliar(int nota, String comentario) {
@@ -130,6 +173,10 @@ public class Atividade {
 	public int buscarQntRestaurantes() {
 		/* Buscar a quantidade de restaurantes disponíveis pra essa atividade */
 		return 8;
+	}
+	
+	public String toString() {
+		return "Atividade[ id="+this.getId()+ ", titulo="+this.getTitulo()+", descricao="+this.getDescricao()+", endereco="+this.getEndereco()+", Restaurante="+this.getRestaurantes()+", hospedagen="+ this.getHospedagens()+" , imagens="+this.getImagens()+", avaliacoes="+this.getAvaliacaos()+"]";
 	}
 	
 }

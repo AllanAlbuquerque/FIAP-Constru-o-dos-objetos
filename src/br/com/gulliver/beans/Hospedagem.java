@@ -57,6 +57,10 @@ public class Hospedagem {
 	public Imagem getImagem(int id) {
 		return this.imagens.get(id);
 	}
+	
+	public ArrayList<Imagem> getImagens() {
+		return this.imagens;
+	}
 
 	public void setImagem(Imagem imagem) {
 		this.imagens.set(imagens.size(), imagem);
@@ -72,6 +76,10 @@ public class Hospedagem {
 	
 	public void deletearHospedagem() {
 		/* Deletar no banco esta Hospedagem */
+	}
+	
+	public String toString() {
+		return "Hospedagem[id="+ this.getId() +", nome="+ this.getTitulo() + ", descricao="+this.getDescricao() +", endereco="+ this.getEndereco()+", imagens="+ this.getImagens() +"]";
 	}
 	
 }

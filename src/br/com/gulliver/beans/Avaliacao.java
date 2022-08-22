@@ -38,6 +38,10 @@ public class Avaliacao {
 		return this.mensagens.get(id);
 	}
 	
+	public ArrayList<Mensagem> getMensagens() {
+		return this.mensagens;
+	}
+	
 	public void setMensagem(Mensagem mensagem) {
 		this.mensagens.set(mensagens.size(), mensagem);
 	}
@@ -48,5 +52,9 @@ public class Avaliacao {
 		
 		/* Inserir no banco nova mensagem para esta avaliação*/
 		
+	}
+	
+	public String toString() {
+		return "Avaliacao[id="+ this.getId() +", nota="+ this.getNota() + ", mensagens="+this.getMensagens() +"]";
 	}
 }

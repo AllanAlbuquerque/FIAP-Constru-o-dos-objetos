@@ -57,4 +57,8 @@ public class Usuario {
 	public void cadastrarUsuario() {
 		/* Cadastrar o usuário usando as infos dessa classe */
 	}
+	
+	public String toString() {
+		return "Usuario[id="+ this.getId() +", email="+ this.getEmail() + ", senha="+this.getSenha() +", perfil="+ this.getPerfil()+"]";
+	}
 }

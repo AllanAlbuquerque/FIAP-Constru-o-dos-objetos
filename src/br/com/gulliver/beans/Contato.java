@@ -67,4 +67,9 @@ public class Contato {
 	public void alterarContato() {
 		/* Atualizar no banco este contato */
 	}
+	
+	public String toString() {
+		return "Contato[id="+ this.getId() +", telefone="+ this.getTelefone() 
+		+", twitter="+this.getTwitter() +", facebook="+this.getFacebook()+", instagram="+this.getInstagram()+"]";
+	}
 }

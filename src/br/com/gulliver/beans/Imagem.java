@@ -47,4 +47,8 @@ public class Imagem {
 	public void deletarImagem() {
 		/* Deletar no banco esta imagem */
 	}
+	
+	public String toString() {
+		return "Imagem[id="+ this.getId() +", url="+ this.getUrl() + ", descricao="+this.getDescricao() +"]";
+	}
 }
